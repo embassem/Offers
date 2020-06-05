@@ -20,10 +20,10 @@ class AppNavigationController: UINavigationController {
         if #available(iOS 11.0, *) {
             self.navigationBar.prefersLargeTitles = false
         }
-        self.navigationBar.tintColor = Asset.Colors.grayscale800.color
+        self.navigationBar.tintColor = UIColor.grayscale800
 //        self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: Asset.Colors.grayscale200.color]
+            [NSAttributedString.Key.foregroundColor: UIColor.grayscale200]
         if #available(iOS 13.0, *) {
             styleiOS13()
         }

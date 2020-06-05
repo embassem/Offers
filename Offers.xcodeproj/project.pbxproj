@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1896D6BF248ABA4300E549BA /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D6BE248ABA4300E549BA /* UIColor+App.swift */; };
 		18B0B22624897CF900DF800B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B21824897CF900DF800B /* Colors.xcassets */; };
 		18B0B22724897CF900DF800B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B21924897CF900DF800B /* Images.xcassets */; };
 		18B0B22A24897CF900DF800B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0B21F24897CF900DF800B /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1896D6BE248ABA4300E549BA /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		18B0B1F82489729300DF800B /* Offers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B0B21824897CF900DF800B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		18B0B21924897CF900DF800B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				18B0B2D82489D94400DF800B /* Assets.swift */,
 				18B0B21824897CF900DF800B /* Colors.xcassets */,
 				18B0B21924897CF900DF800B /* Images.xcassets */,
+				1896D6BE248ABA4300E549BA /* UIColor+App.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				18B0B22B24897CF900DF800B /* SceneDelegate.swift in Sources */,
 				18B0B27E2489BCA700DF800B /* ScaledFont.swift in Sources */,
 				18B0B2D42489D73500DF800B /* OffersListViewProtocol.swift in Sources */,
+				1896D6BF248ABA4300E549BA /* UIColor+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -705,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -722,7 +726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Offers/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -742,7 +746,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Offers/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
