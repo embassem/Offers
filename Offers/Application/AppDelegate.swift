@@ -17,18 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AppManager.launchApp(application)
+        changeBackBarButtonImage()
         self.window = AppManager.shared.window
-        
-        for family in UIFont.familyNames {
-
-                  let sName: String = family as String
-                  print("family: \(sName)")
-                          
-                  for name in UIFont.fontNames(forFamilyName: sName) {
-                      print("\t name: \(name as String)")
-                  }
-              }
-        
                 return true
     }
 

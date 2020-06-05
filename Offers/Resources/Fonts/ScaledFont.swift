@@ -64,8 +64,6 @@ import UIKit
 /// but if you try to use a text style that is not included
 /// in the dictionary it will fallback to the system preferred
 /// font.
-
-
 /*
  Type Properties
  static let body: UIFont.TextStyle
@@ -126,7 +124,6 @@ public enum AppFontStyle: String {
 
      case body1light = "AppFontStyleB1Light"         //Font Family: SF Pro Text; Font Style: Light; Font Size: 16 pt
     case caption2Mediam = "AppFontStyleC2Mediam"     //Font Family: SF Pro Text; Font Style: Medium; Font Size: 12 pt
-    
     
     /// this properity represent the most nearest size in the System text Style  to the App Style
     var systemStyle: UIFont.TextStyle {
@@ -250,14 +247,13 @@ extension UILabel {
         // NSAttributedString.Key.kern: -0.5 we don't want to change kern-pair characters
     }
     
-    
     /// set the text as attributedText to change line Height in percentage than the default lineheight in the Font
     /// - Parameters:
     ///   - text: text to set to lable , all text will be applyed as attributed text
     ///   - style: style description
     ///   - lineHeightMultiple: float number for percentage  as 1 = 100%
     
-    func setText(text: String, style:AppFontStyle, lineHeightMultiple: CGFloat) {
+    func setText(text: String, style: AppFontStyle, lineHeightMultiple: CGFloat) {
         let styleFont = AppFonts.font(forTextStyle: style)
         self.font = styleFont
         let paragraphStyle = NSMutableParagraphStyle()

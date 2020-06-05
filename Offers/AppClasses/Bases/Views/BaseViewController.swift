@@ -12,4 +12,17 @@ import UIKit
 class BaseViewController: UIViewController,
 BaseViewProtocol {
 
+    func addCustomBackButton() -> UIBarButtonItem {
+        let backBtn = UIBarButtonItem(
+            image: Asset.Images.icBackArrow.image,
+            style: .plain,
+            target: self,
+            action: #selector(didTapBackButton))
+        return backBtn
+    }
+    
+    @objc
+    func didTapBackButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
