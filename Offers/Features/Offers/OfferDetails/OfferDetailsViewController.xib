@@ -10,6 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfferDetailsViewController" customModule="Offers" customModuleProvider="target">
             <connections>
+                <outlet property="capInfoContainerView" destination="HS6-fD-2zT" id="oqC-cl-Pwk"/>
+                <outlet property="detailsContainerView" destination="nOF-Wx-hpe" id="fkR-6w-Try"/>
+                <outlet property="offerDetailsLabel" destination="MTG-aB-kb4" id="Ky6-bk-N8Q"/>
+                <outlet property="offerLikeslabel" destination="ZzS-Cu-vNV" id="w4i-C6-9Yb"/>
+                <outlet property="offerMainImageView" destination="1yr-4S-R2t" id="lpe-95-gEB"/>
+                <outlet property="offerTitleLabel" destination="o2z-lv-Cc4" id="jsf-Jd-Jqc"/>
+                <outlet property="offerTypeLabel" destination="vtX-4Q-KrP" id="B6g-QP-qFY"/>
+                <outlet property="priceInfoContainerView" destination="1SL-Eu-yxk" id="OwE-H6-CbC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +33,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="768"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-qw-2gb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="716"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="556.33333333333337"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSn-HS-a9A" userLabel="HeaderImage">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="289.66666666666669"/>
@@ -109,12 +117,11 @@
                                                 <constraint firstItem="o2z-lv-Cc4" firstAttribute="top" secondItem="reP-Hw-NAR" secondAttribute="top" id="kpo-O8-VpI"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nOF-Wx-hpe" userLabel="Details">
-                                            <rect key="frame" x="0.0" y="410.33333333333331" width="375" height="158.33333333333331"/>
+                                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="nOF-Wx-hpe" userLabel="Details" customClass="OfferDetailsView" customModule="Offers" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="410.33333333333331" width="375" height="77"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="759" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-aB-kb4">
-                                                    <rect key="frame" x="24" y="8" width="327" height="142.33333333333334"/>
-                                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="759" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-aB-kb4">
+                                                    <rect key="frame" x="24" y="8" width="327" height="61"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.13" green="0.17999999999999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -127,30 +134,39 @@
                                                 <constraint firstItem="MTG-aB-kb4" firstAttribute="top" secondItem="nOF-Wx-hpe" secondAttribute="top" constant="8" id="Lzx-y6-PQo"/>
                                                 <constraint firstAttribute="bottom" secondItem="MTG-aB-kb4" secondAttribute="bottom" constant="8" id="kTc-PQ-gTg"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="offerDetailsLabel" destination="MTG-aB-kb4" id="Fih-s6-DWF"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1SL-Eu-yxk" userLabel="PriceInfo">
-                                            <rect key="frame" x="0.0" y="576.66666666666663" width="375" height="70.333333333333371"/>
+                                        <view hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1SL-Eu-yxk" userLabel="PriceInfo" customClass="PriceInfoView" customModule="Offers" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="491.33333333333337" width="375" height="60"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7z-pt-dr4">
-                                                    <rect key="frame" x="24" y="16" width="24.666666666666671" height="8"/>
+                                                    <rect key="frame" x="24" y="11" width="24.666666666666671" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.13" green="0.17999999999999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="EGP500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAs-N1-jPC">
-                                                    <rect key="frame" x="24.000000000000004" y="31" width="53.333333333333343" height="17"/>
+                                                    <rect key="frame" x="24.000000000000004" y="18" width="53.333333333333343" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="gkY-lE-ge5"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.44" green="0.53000000000000003" blue="0.58999999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="EGP500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHw-T9-9cX">
-                                                    <rect key="frame" x="91.333333333333329" y="28.666666666666742" width="66.999999999999986" height="21.666666666666671"/>
+                                                    <rect key="frame" x="91.333333333333329" y="16" width="66.999999999999986" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="ngu-wd-cnD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Exp.28 April 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j3-mY-PQU">
-                                                    <rect key="frame" x="264.66666666666669" y="36.333333333333371" width="86.333333333333314" height="12"/>
+                                                    <rect key="frame" x="264.66666666666669" y="26" width="86.333333333333314" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.44" green="0.53000000000000003" blue="0.58999999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -162,15 +178,21 @@
                                                 <constraint firstItem="b7z-pt-dr4" firstAttribute="leading" secondItem="1SL-Eu-yxk" secondAttribute="leading" constant="24" id="Gr2-M0-lPD"/>
                                                 <constraint firstItem="yHw-T9-9cX" firstAttribute="leading" secondItem="sAs-N1-jPC" secondAttribute="trailing" constant="14" id="L3L-16-3sU"/>
                                                 <constraint firstAttribute="bottom" secondItem="yHw-T9-9cX" secondAttribute="bottom" constant="20" id="SCe-nf-ble"/>
-                                                <constraint firstItem="b7z-pt-dr4" firstAttribute="top" secondItem="1SL-Eu-yxk" secondAttribute="top" constant="16" id="WwM-4r-fMy"/>
+                                                <constraint firstItem="b7z-pt-dr4" firstAttribute="top" secondItem="1SL-Eu-yxk" secondAttribute="top" constant="11" id="WwM-4r-fMy"/>
                                                 <constraint firstItem="sAs-N1-jPC" firstAttribute="leading" secondItem="b7z-pt-dr4" secondAttribute="leading" id="XjW-8b-S1i"/>
                                                 <constraint firstAttribute="trailing" secondItem="9j3-mY-PQU" secondAttribute="trailing" constant="24" id="ifP-mb-EGT"/>
                                                 <constraint firstItem="sAs-N1-jPC" firstAttribute="top" secondItem="b7z-pt-dr4" secondAttribute="bottom" constant="7" id="p6j-vG-KPS"/>
                                                 <constraint firstItem="yHw-T9-9cX" firstAttribute="centerY" secondItem="sAs-N1-jPC" secondAttribute="centerY" id="vuk-Dk-Kpq"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="offerExpirationDateLabel" destination="9j3-mY-PQU" id="WG4-u0-Ncx"/>
+                                                <outlet property="offerNewPriceLabel" destination="yHw-T9-9cX" id="MNy-xp-Brv"/>
+                                                <outlet property="offerOldPricceLabel" destination="sAs-N1-jPC" id="NVZ-jE-16M"/>
+                                                <outlet property="priceTitleLabel" destination="b7z-pt-dr4" id="RAs-ki-l3a"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-fD-2zT" userLabel="CapsInfo">
-                                            <rect key="frame" x="0.0" y="655" width="375" height="61"/>
+                                        <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-fD-2zT" userLabel="CapsInfo" customClass="CapInfoView" customModule="Offers" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="495.33333333333337" width="375" height="61"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="REDEMPTIONS CAP: 4 TIMES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoW-3q-tzx">
                                                     <rect key="frame" x="24" y="20" width="167.33333333333334" height="21"/>
@@ -188,6 +210,9 @@
                                                 <constraint firstItem="YoW-3q-tzx" firstAttribute="leading" secondItem="HS6-fD-2zT" secondAttribute="leading" constant="24" id="jrd-DZ-5pc"/>
                                                 <constraint firstAttribute="bottom" secondItem="YoW-3q-tzx" secondAttribute="bottom" constant="20" id="kQL-XJ-ErB"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="capInfoLabel" destination="YoW-3q-tzx" id="Iyf-vC-d21"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

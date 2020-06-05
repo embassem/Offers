@@ -94,14 +94,14 @@ import UIKit
 /*
  //Print fonts Names
  for family in UIFont.familyNames {
-
-           let sName: String = family as String
-           print("family: \(sName)")
-                   
-           for name in UIFont.fontNames(forFamilyName: sName) {
-               print("\t name: \(name as String)")
-           }
-       }
+ 
+ let sName: String = family as String
+ print("family: \(sName)")
+ 
+ for name in UIFont.fontNames(forFamilyName: sName) {
+ print("\t name: \(name as String)")
+ }
+ }
  */
 /*
  
@@ -120,21 +120,25 @@ public enum AppFontStyle: String {
     case headline1Mediam = "AppFontStyleH1Mediam"   //Font Family: SF Pro Text; Font Style: Medium; Font Size: 24 pt
     case caption1Regular = "AppFontStyleC1Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 10 pt
     case title2Bold = "AppFontStyleT2Bold"          //Font Family: SF Pro Text; Font Style: Bold; Font Size: 16 pt
-    case title1Bold = "AppFontStyleH1Bold"          //Font Family: SF Pro Text; Font Style: Medium; Font Size: 32 pt
-
-     case body1light = "AppFontStyleB1Light"         //Font Family: SF Pro Text; Font Style: Light; Font Size: 16 pt
+    case title1Medium = "AppFontStyleH1Medium"          //Font Family: SF Pro Text; Font Style: Medium; Font Size: 32 pt
+    case body1light = "AppFontStyleB1Light"         //Font Family: SF Pro Text; Font Style: Light; Font Size: 16 pt
     case caption2Mediam = "AppFontStyleC2Mediam"     //Font Family: SF Pro Text; Font Style: Medium; Font Size: 12 pt
     
+    case caption1Normal = "AppFontStyleC1Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 10 pt
+    case caption2Normal = "AppFontStyleC2Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 12 pt
+    case caption3Normal = "AppFontStyleC3Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 14 pt
+    case caption4Normal = "AppFontStyleC4Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 18 pt
+    case body1normal = "AppFontStyleB1Normal"         //Font Family: SF Pro Text; Font Style: Normal; Font Size: 16 pt
     /// this properity represent the most nearest size in the System text Style  to the App Style
     var systemStyle: UIFont.TextStyle {
         switch self {
-        case .body1Bold, .body1light:
+        case .body1Bold, .body1light, .body1normal:
             return UIFont.TextStyle.body
         case .headline1Mediam:
             return UIFont.TextStyle.headline
-        case .title1Bold:
+        case .title1Medium:
             return UIFont.TextStyle.title1
-        case .caption1Regular, .caption2Mediam:
+        case .caption1Regular, .caption2Mediam, .caption1Normal, .caption2Normal ,.caption3Normal, .caption4Normal:
             return UIFont.TextStyle.caption1
         case .title2Bold:
             return .title2
