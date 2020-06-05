@@ -36,6 +36,16 @@
 		18B0B26C248980BA00DF800B /* UIImage+Essentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0B26A248980BA00DF800B /* UIImage+Essentials.swift */; };
 		18B0B2702489827800DF800B /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0B26F2489827800DF800B /* Container.swift */; };
 		18B0B276248984C300DF800B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B275248984C300DF800B /* LaunchScreen.storyboard */; };
+		18B0B27D2489BCA700DF800B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0B27A2489BCA700DF800B /* Fonts.swift */; };
+		18B0B27E2489BCA700DF800B /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0B27B2489BCA700DF800B /* ScaledFont.swift */; };
+		18B0B2812489BEF200DF800B /* EnglishStyle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2802489BEF200DF800B /* EnglishStyle.plist */; };
+		18B0B2882489BEFA00DF800B /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2822489BEFA00DF800B /* SF-Pro-Text-Semibold.otf */; };
+		18B0B2892489BEFA00DF800B /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2832489BEFA00DF800B /* SF-Pro-Text-Medium.otf */; };
+		18B0B28A2489BEFA00DF800B /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2842489BEFA00DF800B /* SF-Pro-Text-Bold.otf */; };
+		18B0B28B2489BEFA00DF800B /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2852489BEFA00DF800B /* SF-Pro-Text-Light.otf */; };
+		18B0B28C2489BEFA00DF800B /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2862489BEFA00DF800B /* SF-Pro-Text-Regular.otf */; };
+		18B0B28D2489BEFA00DF800B /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2872489BEFA00DF800B /* SF-Pro-Text-Thin.otf */; };
+		18B0B2B42489D2DB00DF800B /* Apercu Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B2A12489D2DB00DF800B /* Apercu Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +82,16 @@
 		18B0B26A248980BA00DF800B /* UIImage+Essentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Essentials.swift"; sourceTree = "<group>"; };
 		18B0B26F2489827800DF800B /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		18B0B275248984C300DF800B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18B0B27A2489BCA700DF800B /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = "../../../../../Bassem/The-Valley/The Valley/Resources/Fonts/Fonts.swift"; sourceTree = "<group>"; };
+		18B0B27B2489BCA700DF800B /* ScaledFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
+		18B0B2802489BEF200DF800B /* EnglishStyle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnglishStyle.plist; sourceTree = "<group>"; };
+		18B0B2822489BEFA00DF800B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		18B0B2832489BEFA00DF800B /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		18B0B2842489BEFA00DF800B /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		18B0B2852489BEFA00DF800B /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		18B0B2862489BEFA00DF800B /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		18B0B2872489BEFA00DF800B /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
+		18B0B2A12489D2DB00DF800B /* Apercu Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +158,11 @@
 		18B0B21624897CF900DF800B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				18B0B28E2489D2DB00DF800B /* Apercu-Font */,
+				18B0B27F2489BE9E00DF800B /* SFProText */,
+				18B0B27A2489BCA700DF800B /* Fonts.swift */,
+				18B0B2802489BEF200DF800B /* EnglishStyle.plist */,
+				18B0B27B2489BCA700DF800B /* ScaledFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -292,6 +317,27 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		18B0B27F2489BE9E00DF800B /* SFProText */ = {
+			isa = PBXGroup;
+			children = (
+				18B0B2842489BEFA00DF800B /* SF-Pro-Text-Bold.otf */,
+				18B0B2852489BEFA00DF800B /* SF-Pro-Text-Light.otf */,
+				18B0B2832489BEFA00DF800B /* SF-Pro-Text-Medium.otf */,
+				18B0B2862489BEFA00DF800B /* SF-Pro-Text-Regular.otf */,
+				18B0B2822489BEFA00DF800B /* SF-Pro-Text-Semibold.otf */,
+				18B0B2872489BEFA00DF800B /* SF-Pro-Text-Thin.otf */,
+			);
+			path = SFProText;
+			sourceTree = "<group>";
+		};
+		18B0B28E2489D2DB00DF800B /* Apercu-Font */ = {
+			isa = PBXGroup;
+			children = (
+				18B0B2A12489D2DB00DF800B /* Apercu Bold.otf */,
+			);
+			path = "Apercu-Font";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,12 +398,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B0B28B2489BEFA00DF800B /* SF-Pro-Text-Light.otf in Resources */,
+				18B0B2812489BEF200DF800B /* EnglishStyle.plist in Resources */,
 				18B0B276248984C300DF800B /* LaunchScreen.storyboard in Resources */,
+				18B0B2B42489D2DB00DF800B /* Apercu Bold.otf in Resources */,
 				18B0B22624897CF900DF800B /* Colors.xcassets in Resources */,
 				18B0B22724897CF900DF800B /* Images.xcassets in Resources */,
+				18B0B2882489BEFA00DF800B /* SF-Pro-Text-Semibold.otf in Resources */,
+				18B0B28C2489BEFA00DF800B /* SF-Pro-Text-Regular.otf in Resources */,
 				18B0B26424897EBC00DF800B /* Localizable.strings in Resources */,
+				18B0B28A2489BEFA00DF800B /* SF-Pro-Text-Bold.otf in Resources */,
+				18B0B28D2489BEFA00DF800B /* SF-Pro-Text-Thin.otf in Resources */,
 				18B0B25D24897E7F00DF800B /* SplashViewController.xib in Resources */,
 				18B0B23124897DB100DF800B /* Base.xcconfig in Resources */,
+				18B0B2892489BEFA00DF800B /* SF-Pro-Text-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +477,7 @@
 				18B0B26C248980BA00DF800B /* UIImage+Essentials.swift in Sources */,
 				18B0B24924897E3D00DF800B /* AppTabBarViewController.swift in Sources */,
 				18B0B24A24897E3D00DF800B /* AppNavigationController.swift in Sources */,
+				18B0B27D2489BCA700DF800B /* Fonts.swift in Sources */,
 				18B0B26524897EBC00DF800B /* Localized.swift in Sources */,
 				18B0B22A24897CF900DF800B /* AppDelegate.swift in Sources */,
 				18B0B25224897E6300DF800B /* Result.swift in Sources */,
@@ -430,6 +485,7 @@
 				18B0B24524897E3D00DF800B /* BaseModelProtocol.swift in Sources */,
 				18B0B26624897EBC00DF800B /* Localized+Runtime.swift in Sources */,
 				18B0B22B24897CF900DF800B /* SceneDelegate.swift in Sources */,
+				18B0B27E2489BCA700DF800B /* ScaledFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

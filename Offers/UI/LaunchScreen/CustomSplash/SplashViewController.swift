@@ -19,10 +19,10 @@ class SplashViewController: UIViewController {
     }
 
     fileprivate func startAnimation() {
-        logoImageView.transform = .init(scaleX: 0, y: 0)
+        //logoImageView.transform = .init(scaleX: 0, y: 0)
 
         UIView.animate(
-            withDuration: 1.5,
+            withDuration: 15,
             delay: 0.3,
             usingSpringWithDamping: 4,
             initialSpringVelocity: 5,
@@ -36,7 +36,7 @@ class SplashViewController: UIViewController {
     fileprivate func animationCompleted() {
         //TODO: Navigate to root View
 
-        let vc = Container.Root.getRootTapScene()
+        let vc = Container.Root.getRootScene()
         AppManager.setWindowTransition(vc)
     }
 

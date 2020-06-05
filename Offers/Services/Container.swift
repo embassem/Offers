@@ -14,8 +14,8 @@ class Container {
     }
 
     class Root {
-        class func getRootTapScene() -> UIViewController {
-            return AppTabBarViewController()
+        class func getRootScene() -> UIViewController {
+            return getOfferHomeScene()
         }
 
         class func getOfferHomeScene() -> UIViewController {
