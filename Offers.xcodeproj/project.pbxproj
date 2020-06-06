@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18777EE2248C0F4D00A4CA60 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 18777EE1248C0F4D00A4CA60 /* Moya */; };
+		18777EE2248C0F4D00A4CA60 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18777EE1248C0F4D00A4CA60 /* SwiftPackageProductDependency */; };
 		18777F3A248C15D500A4CA60 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F2D248C15D500A4CA60 /* StaticHeaderPlugin.swift */; };
 		18777F3B248C15D500A4CA60 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F2E248C15D500A4CA60 /* NetworkManager.swift */; };
 		18777F3C248C15D500A4CA60 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F2F248C15D500A4CA60 /* NetworkDefaults.swift */; };
 		18777F3D248C15D500A4CA60 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F30248C15D500A4CA60 /* NetworkError.swift */; };
 		18777F3F248C15D500A4CA60 /* Services+NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F35248C15D500A4CA60 /* Services+NetworkManager.swift */; };
 		18777F40248C15D500A4CA60 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F36248C15D500A4CA60 /* Services.swift */; };
-		18777F45248C30B500A4CA60 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 18777F44248C30B500A4CA60 /* Toast */; };
+		18777F45248C30B500A4CA60 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18777F44248C30B500A4CA60 /* SwiftPackageProductDependency */; };
 		18777F4E248C32D800A4CA60 /* NoInternetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18777F4A248C32D800A4CA60 /* NoInternetView.xib */; };
 		18777F4F248C32D800A4CA60 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18777F4C248C32D800A4CA60 /* NoInternetView.swift */; };
 		1893A461248B076900EB063A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A45C248B076800EB063A /* Price.swift */; };
@@ -24,8 +24,8 @@
 		1893A465248B076900EB063A /* OffersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A460248B076900EB063A /* OffersList.swift */; };
 		1893A469248B12FA00EB063A /* offerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 1893A468248B121900EB063A /* offerList.json */; };
 		1893A46A248B12FD00EB063A /* details.json in Resources */ = {isa = PBXBuildFile; fileRef = 1893A467248B083700EB063A /* details.json */; };
-		1893A46D248B151400EB063A /* KingfisherDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* KingfisherDynamic */; };
-		1893A46E248B151400EB063A /* KingfisherDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* KingfisherDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1893A46D248B151400EB063A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* SwiftPackageProductDependency */; };
+		1893A46E248B151400EB063A /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* SwiftPackageProductDependency */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1893A472248B316300EB063A /* OffersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A471248B316300EB063A /* OffersListDataSource.swift */; };
 		1893A478248B32D400EB063A /* OfferCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A476248B32D400EB063A /* OfferCellTableViewCell.swift */; };
 		1893A479248B32D400EB063A /* OfferCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893A477248B32D400EB063A /* OfferCellTableViewCell.xib */; };
@@ -101,7 +101,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1893A46E248B151400EB063A /* KingfisherDynamic in Embed Frameworks */,
+				1893A46E248B151400EB063A /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,9 +201,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18777F45248C30B500A4CA60 /* Toast in Frameworks */,
-				18777EE2248C0F4D00A4CA60 /* Moya in Frameworks */,
-				1893A46D248B151400EB063A /* KingfisherDynamic in Frameworks */,
+				18777F45248C30B500A4CA60 /* BuildFile in Frameworks */,
+				18777EE2248C0F4D00A4CA60 /* BuildFile in Frameworks */,
+				1893A46D248B151400EB063A /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,9 +641,9 @@
 			);
 			name = Offers;
 			packageProductDependencies = (
-				1893A46C248B151400EB063A /* KingfisherDynamic */,
-				18777EE1248C0F4D00A4CA60 /* Moya */,
-				18777F44248C30B500A4CA60 /* Toast */,
+				1893A46C248B151400EB063A /* SwiftPackageProductDependency */,
+				18777EE1248C0F4D00A4CA60 /* SwiftPackageProductDependency */,
+				18777F44248C30B500A4CA60 /* SwiftPackageProductDependency */,
 			);
 			productName = Offers;
 			productReference = 18B0B1F82489729300DF800B /* Offers.app */;
@@ -675,9 +675,9 @@
 			);
 			mainGroup = 18B0B1EF2489729300DF800B;
 			packageReferences = (
-				1893A46B248B151400EB063A /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				18777EE0248C0F4D00A4CA60 /* XCRemoteSwiftPackageReference "Moya" */,
-				18777F43248C30B500A4CA60 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				1893A46B248B151400EB063A /* RemoteSwiftPackageReference */,
+				18777EE0248C0F4D00A4CA60 /* RemoteSwiftPackageReference */,
+				18777F43248C30B500A4CA60 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 18B0B1F92489729300DF800B /* Products */;
 			projectDirPath = "";
@@ -1028,7 +1028,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18777EE0248C0F4D00A4CA60 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		18777EE0248C0F4D00A4CA60 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
@@ -1036,7 +1036,7 @@
 				minimumVersion = 14.0.0;
 			};
 		};
-		18777F43248C30B500A4CA60 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+		18777F43248C30B500A4CA60 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift";
 			requirement = {
@@ -1044,7 +1044,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		1893A46B248B151400EB063A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		1893A46B248B151400EB063A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1055,19 +1055,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18777EE1248C0F4D00A4CA60 /* Moya */ = {
+		18777EE1248C0F4D00A4CA60 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18777EE0248C0F4D00A4CA60 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 18777EE0248C0F4D00A4CA60 /* RemoteSwiftPackageReference */;
 			productName = Moya;
 		};
-		18777F44248C30B500A4CA60 /* Toast */ = {
+		18777F44248C30B500A4CA60 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18777F43248C30B500A4CA60 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			package = 18777F43248C30B500A4CA60 /* RemoteSwiftPackageReference */;
 			productName = Toast;
 		};
-		1893A46C248B151400EB063A /* KingfisherDynamic */ = {
+		1893A46C248B151400EB063A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1893A46B248B151400EB063A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 1893A46B248B151400EB063A /* RemoteSwiftPackageReference */;
 			productName = KingfisherDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
