@@ -9,5 +9,6 @@
 import Foundation
 
 protocol OfferDetailsPresenterProtocol: BasePresenterProtocol {
-
+    func viewDidLoad()
+    func toggleLikeOffer()
 }

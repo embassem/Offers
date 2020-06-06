@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppManager.launchApp(application)
         changeBackBarButtonImage()
         self.window = AppManager.shared.window
-                return true
+        return true
     }
 
     // MARK: UISceneSession Lifecycle

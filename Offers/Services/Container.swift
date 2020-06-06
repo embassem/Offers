@@ -24,9 +24,9 @@ class Container {
             offer.extendedLayoutIncludesOpaqueBars = true
             return offer.embadInNav()
         }
-        
-        class func getOfferDetailsScene(offer: Any) -> UIViewController {
-            let details = OfferDetailsBuilder.createModule(offer: offer)
+
+        class func getOfferDetailsScene(offerItem: Item) -> UIViewController {
+            let details = OfferDetailsBuilder.createModule(offer: OfferDetails(item: offerItem))
             return details
         }
     }

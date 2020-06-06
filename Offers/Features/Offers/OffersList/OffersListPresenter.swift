@@ -10,7 +10,7 @@ import Foundation
 
 class OffersListPresenter<View: OffersListViewProtocol, Model: OffersListModelProtocol>:
 BasePresenter<View, Model>, OffersListPresenterProtocol {
-    
+
     private var view: View?
     private var model: Model?
 

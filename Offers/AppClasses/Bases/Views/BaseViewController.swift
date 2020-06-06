@@ -20,7 +20,7 @@ BaseViewProtocol {
             action: #selector(didTapBackButton))
         return backBtn
     }
-    
+
     @objc
     func didTapBackButton() {
         self.navigationController?.popViewController(animated: true)

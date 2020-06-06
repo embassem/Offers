@@ -22,28 +22,28 @@ extension UIColor {
     }
 
     class var grayscale200: UIColor {
-           if #available(iOS 11.0, *) {
-               return Asset.Colors.grayscale200.color
-           } else {
+        if #available(iOS 11.0, *) {
+            return Asset.Colors.grayscale200.color
+        } else {
             return UIColor(red: 0.97, green: 0.98, blue: 0.98, alpha: 1.0)
-           }
-       }
-    
+        }
+    }
+
     class var grayscale600: UIColor {
-           if #available(iOS 11.0, *) {
-               return Asset.Colors.grayscale600.color
-           } else {
+        if #available(iOS 11.0, *) {
+            return Asset.Colors.grayscale600.color
+        } else {
             return UIColor(red: 0.44, green: 0.53, blue: 0.59, alpha: 1.0)
-           }
-       }
-    
-    
+        }
+    }
+
+
     class var grayscale800: UIColor {
-           if #available(iOS 11.0, *) {
-               return Asset.Colors.grayscale800.color
-           } else {
+        if #available(iOS 11.0, *) {
+            return Asset.Colors.grayscale800.color
+        } else {
             return UIColor(red: 0.13, green: 0.18, blue: 0.20, alpha: 1.0)
-           }
-       }
-    
+        }
+    }
+
 }

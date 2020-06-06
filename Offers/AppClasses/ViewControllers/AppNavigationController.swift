@@ -21,13 +21,13 @@ class AppNavigationController: UINavigationController {
             self.navigationBar.prefersLargeTitles = false
         }
         self.navigationBar.tintColor = UIColor.grayscale800
-//        self.navigationItem.leftItemsSupplementBackButton = true
+        //        self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.grayscale200]
         if #available(iOS 13.0, *) {
             styleiOS13()
         }
-        
+
         changeBackBarButtonImage()
     }
 

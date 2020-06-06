@@ -114,6 +114,13 @@
 		<key>fontSize</key>
 		<integer>32</integer>
 	</dict>
+	<key>AppFontStyleH2Medium</key>
+	<dict>
+		<key>fontName</key>
+		<string>SFProText-Medium</string>
+		<key>fontSize</key>
+		<integer>18</integer>
+	</dict>
 	<key>AppFontStyleB1Light</key>
 	<dict>
 		<key>fontName</key>
@@ -135,10 +142,10 @@
 		<key>fontSize</key>
 		<integer>10</integer>
 	</dict>
-	<key>AppFontStyleC2Normal</key>
+	<key>AppFontStyleC2Medium</key>
 	<dict>
 		<key>fontName</key>
-		<string>SFProText-Normal</string>
+		<string>SFProText-Medium</string>
 		<key>fontSize</key>
 		<integer>12</integer>
 	</dict>
@@ -162,6 +169,20 @@
 		<string>SFProText-Normal</string>
 		<key>fontSize</key>
 		<integer>16</integer>
+	</dict>
+	<key>AppFontStyleC3Regular</key>
+	<dict>
+		<key>fontName</key>
+		<string>SFProText-Regular</string>
+		<key>fontSize</key>
+		<integer>14</integer>
+	</dict>
+	<key>AppFontStyleMedium5</key>
+	<dict>
+		<key>fontName</key>
+		<string>SFProText-Medium</string>
+		<key>fontSize</key>
+		<integer>18</integer>
 	</dict>
 </dict>
 </plist>

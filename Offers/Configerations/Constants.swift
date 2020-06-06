@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-
+    static let delayTime = 1.5
 }

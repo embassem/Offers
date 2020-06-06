@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class OffersListViewController: BaseViewController {
-    
+
     // MARK: - Presenter
     private var presenter: OffersListPresenterProtocol?
     func setPresenter(presenter: OffersListPresenterProtocol) {
         self.presenter = presenter
     }
-    
+
     // MARK: - Public Variables
 
     // MARK: - Private Variables
@@ -56,12 +56,13 @@ extension OffersListViewController {
                                           action: #selector(navigateToDetails))
         navigationItem.rightBarButtonItem = rightButton
     }
-    
+
     @objc
     func navigateToDetails() {
-        let offer = "Offer"
-        let detailsVc = Container.Root.getOfferDetailsScene(offer: offer)
-        self.push(viewController: detailsVc)
+        if let offerItem = Item.sampleItem() {
+            let detailsVc = Container.Root.getOfferDetailsScene(offerItem: offerItem)
+            self.push(viewController: detailsVc)
+        }
     }
 }
 

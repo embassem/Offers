@@ -89,22 +89,22 @@ import UIKit
  static let title3: UIFont.TextStyle
  The font used for third level hierarchical headings.
  Initializers
- 
+
  */
 /*
  //Print fonts Names
  for family in UIFont.familyNames {
- 
+
  let sName: String = family as String
  print("family: \(sName)")
- 
+
  for name in UIFont.fontNames(forFamilyName: sName) {
  print("\t name: \(name as String)")
  }
  }
  */
 /*
- 
+
  family: SF Pro Text
  name: SFProText-Medium
  name: SFProText-Bold
@@ -112,33 +112,65 @@ import UIKit
  name: SFProText-Regular
  name: SFProText-Thin
  name: SFProText-Semibold
- 
+
+ */
+
+//TODO Better Naming
+/*
+ font Size to be
+ 10  => 1
+ 12  => 2
+ 14  => 3
+ 16  => 4
+ 18  => 5
+ 20  => 6
+ 24  => 7
+ 32  => 8
+
+
+ for font Style / Weight
+ Bold
+ Light
+ Medium
+ Regular
+ semibold
+ thin
+
+ Compination:
+ bold1
+ bold2
+ bold3
+ regular3
+ regular4
+
  */
 public enum AppFontStyle: String {
-    
+
     case body1Bold = "AppFontStyleBody1Bold"        //Font Family: Apercu;      Font Style: Bold;   Font Size: 16 pt
     case headline1Mediam = "AppFontStyleH1Mediam"   //Font Family: SF Pro Text; Font Style: Medium; Font Size: 24 pt
+    case medium5 = "AppFontStyleMedium5"   //Font Family: SF Pro Text; Font Style: Medium; Font Size: 18 pt
     case caption1Regular = "AppFontStyleC1Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 10 pt
+    case caption3Regular = "AppFontStyleC3Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 14 pt
     case title2Bold = "AppFontStyleT2Bold"          //Font Family: SF Pro Text; Font Style: Bold; Font Size: 16 pt
     case title1Medium = "AppFontStyleH1Medium"          //Font Family: SF Pro Text; Font Style: Medium; Font Size: 32 pt
     case body1light = "AppFontStyleB1Light"         //Font Family: SF Pro Text; Font Style: Light; Font Size: 16 pt
     case caption2Mediam = "AppFontStyleC2Mediam"     //Font Family: SF Pro Text; Font Style: Medium; Font Size: 12 pt
-    
-    case caption1Normal = "AppFontStyleC1Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 10 pt
-    case caption2Normal = "AppFontStyleC2Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 12 pt
+
+    case caption2Medium = "AppFontStyleC2Medium"  //Font Family: SF Pro Text; Font Style: Medium; Font Size: 12 pt
     case caption3Normal = "AppFontStyleC3Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 14 pt
     case caption4Normal = "AppFontStyleC4Normal"  //Font Family: SF Pro Text; Font Style: Normal; Font Size: 18 pt
     case body1normal = "AppFontStyleB1Normal"         //Font Family: SF Pro Text; Font Style: Normal; Font Size: 16 pt
+
     /// this properity represent the most nearest size in the System text Style  to the App Style
     var systemStyle: UIFont.TextStyle {
         switch self {
-        case .body1Bold, .body1light, .body1normal:
+        case .body1Bold, .body1light, .body1normal, .medium5:
             return UIFont.TextStyle.body
         case .headline1Mediam:
             return UIFont.TextStyle.headline
         case .title1Medium:
             return UIFont.TextStyle.title1
-        case .caption1Regular, .caption2Mediam, .caption1Normal, .caption2Normal ,.caption3Normal, .caption4Normal:
+        case .caption1Regular, .caption2Mediam, .caption2Medium, .caption3Normal, .caption4Normal, .caption3Regular:
             return UIFont.TextStyle.caption1
         case .title2Bold:
             return .title2
@@ -147,12 +179,12 @@ public enum AppFontStyle: String {
 }
 
 struct AppFonts {
-    
+
     static var current: Fonts = .mainEnglish
-    
+
     enum Fonts: String {
         case mainEnglish = "EnglishStyle"
-        
+
         var scaledFont: ScaledFont {
             switch self {
             case .mainEnglish:
@@ -160,28 +192,28 @@ struct AppFonts {
             }
         }
     }
-    
+
     static private var mainEnglishScaledFont: ScaledFont = {
         return ScaledFont(fontName: Fonts.mainEnglish.rawValue)
     }()
 }
 
 public final class ScaledFont {
-    
+
     private struct FontDescription: Decodable {
         let fontSize: CGFloat
         let fontName: String
     }
-    
+
     private typealias StyleDictionary = [UIFont.TextStyle.RawValue: FontDescription]
     private var styleDictionary: StyleDictionary?
-    
+
     /// Create a `ScaledFont`
     ///
     /// - Parameter fontName: Name of a plist file (without the extension)
     ///   in the main bundle that contains the style dictionary used to
     ///   scale fonts for each text style.
-    
+
     public init(fontName: String) {
         if let url = Bundle.main.url(forResource: fontName, withExtension: "plist"),
             let data = try? Data(contentsOf: url) {
@@ -189,7 +221,7 @@ public final class ScaledFont {
             styleDictionary = try? decoder.decode(StyleDictionary.self, from: data)
         }
     }
-    
+
     /// Get the scaled font for the given text style using the
     /// style dictionary supplied at initialization.
     ///
@@ -202,7 +234,7 @@ public final class ScaledFont {
     /// - Note: If the style dictionary does not have
     ///   a font for this text style the default preferred
     ///   font is returned.
-    
+
     public func font(forTextStyle textStyle: AppFontStyle) -> UIFont {
         guard let fontDescription = styleDictionary?[textStyle.rawValue],
             let font = UIFont(name: fontDescription.fontName, size: fontDescription.fontSize) else {
@@ -214,7 +246,7 @@ public final class ScaledFont {
         } else {
             return font
         }
-        
+
     }
 }
 
@@ -230,7 +262,7 @@ extension UILabel {
         let styleFont = AppFonts.font(forTextStyle: style)
         self.font = styleFont
     }
-    
+
     /// set the text as attributedText to change lineHeight in Pt than the default lineheight in the Font
     /// - Parameters:
     ///   - text: text to set to lable , all text will be applyed as attributed text
@@ -247,16 +279,16 @@ extension UILabel {
             string: text,
             attributes: [NSAttributedString.Key.font: styleFont,
                          NSAttributedString.Key.paragraphStyle: paragraphStyle])
-        
+
         // NSAttributedString.Key.kern: -0.5 we don't want to change kern-pair characters
     }
-    
+
     /// set the text as attributedText to change line Height in percentage than the default lineheight in the Font
     /// - Parameters:
     ///   - text: text to set to lable , all text will be applyed as attributed text
     ///   - style: style description
     ///   - lineHeightMultiple: float number for percentage  as 1 = 100%
-    
+
     func setText(text: String, style: AppFontStyle, lineHeightMultiple: CGFloat) {
         let styleFont = AppFonts.font(forTextStyle: style)
         self.font = styleFont

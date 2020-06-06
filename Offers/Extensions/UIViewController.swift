@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIViewController {
-    
+
     public func isViewLoadedAndShowing() -> Bool { return isViewLoaded && view.window != nil }
-    
+
     func push( viewController: UIViewController, completion: (() -> Void)? = nil) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)

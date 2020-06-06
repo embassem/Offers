@@ -9,5 +9,5 @@
 import Foundation
 
 protocol OfferDetailsModelProtocol: BaseModelProtocol {
-
+    func getOffer(id: Int, completion: @escaping (_ Status: Result<OfferDetails, Error>) -> Void)
 }

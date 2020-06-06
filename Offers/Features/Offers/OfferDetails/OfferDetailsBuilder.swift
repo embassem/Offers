@@ -11,11 +11,11 @@ import  UIKit
 
 class OfferDetailsBuilder {
 
-    class func createModule(offer: Any) -> UIViewController {
+    class func createModule(offer: OfferDetails) -> UIViewController {
 
         let view = OfferDetailsViewController(nibName: "OfferDetailsViewController", bundle: nil)
         let model = OfferDetailsModel()
-        let presenter = OfferDetailsPresenter(view: view, model: model)
+        let presenter = OfferDetailsPresenter(offer: offer, view: view, model: model)
         view.setPresenter(presenter: presenter)
 
         return view
