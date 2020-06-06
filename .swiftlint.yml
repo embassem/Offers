@@ -11,6 +11,7 @@ excluded:
   - Frameworks
   - Pods
   - Submodule
+  - Offers/Resources
 opt_in_rules:
   - empty_count
   - explicit_init

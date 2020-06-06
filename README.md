@@ -8,4 +8,5 @@ as of support iOS 10
 ## Setup Symbolic link for git Hooks  
 
 to link pre-Commit script  run this command from project root directory
+to create a Symbolic link to a hook in git or replacr .git/hooks with ./hooks directory
 ``` ln -s -f ./hooks/pre-commit .git/hooks/pre-commit```
