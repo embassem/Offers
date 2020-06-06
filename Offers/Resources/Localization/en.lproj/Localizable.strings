@@ -1,12 +1,11 @@
-/* 
-  Localizable.strings
-  The Valley
+//
+//  Localizable.strings
+//  Offers
+//
+//  Created by Bassem Abbas on 6/4/20.
+//  Copyright © 2020 Bassem Abbas. All rights reserved.
+//
 
-  Created by Bassem Abbas on 3/3/20.
-  Copyright © 2020 Bassem Abbas. All rights reserved.
-*/
-"Channels.Title" = "Channels";
-"Channels.Section.NewEpisodes.Title" = "New Episodes";
-"Channels.Section.Channels.Course_Count" = "%d episodes";
-"Channels.Section.Channels.Series_Count" = "%d series";
-"Channels.Section.Categories.Title" = "Browse by categories";
+"offers_list.title" = "Title";
+"offer_details.title" = "";
+"offer_details.redemptions_caps" = "REDEMPTIONS CAP";

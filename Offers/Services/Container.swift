@@ -14,15 +14,20 @@ class Container {
     }
 
     class Root {
-        class func getRootTapScene() -> UIViewController {
-            return AppTabBarViewController()
+        class func getRootScene() -> UIViewController {
+            return getOffersListScene()
         }
 
-        class func getOfferHomeScene() -> UIViewController {
-            let channels = UIViewController()
-            channels.edgesForExtendedLayout = .all
-            channels.extendedLayoutIncludesOpaqueBars = true
-            return channels.embadInNav()
+        class func getOffersListScene() -> UIViewController {
+            let offer = OffersListBuilder.createModule()
+            offer.edgesForExtendedLayout = .all
+            offer.extendedLayoutIncludesOpaqueBars = true
+            return offer.embadInNav()
+        }
+
+        class func getOfferDetailsScene(offerItem: Item) -> UIViewController {
+            let details = OfferDetailsBuilder.createModule(offer: OfferDetails(item: offerItem))
+            return details
         }
     }
 }

@@ -19,8 +19,21 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Colors {
+    internal static let background = ColorAsset(name: "Background")
+    internal static let grayscale200 = ColorAsset(name: "Grayscale200")
+    internal static let grayscale600 = ColorAsset(name: "Grayscale600")
+    internal static let grayscale800 = ColorAsset(name: "Grayscale800")
   }
   internal enum Images {
+    internal static let icBackArrow = ImageAsset(name: "ic_back_arrow")
+    internal static let icLike = ImageAsset(name: "ic_like")
+    internal static let icLikesFilled = ImageAsset(name: "ic_likes.filled")
+    internal static let icNoInternet = ImageAsset(name: "ic_no_internet")
+    internal static let icShare = ImageAsset(name: "ic_share")
+    internal static let imgLogo = ImageAsset(name: "img_logo")
+    internal enum Preview {
+      internal static let imgDetails = ImageAsset(name: "preview/img.details")
+    }
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

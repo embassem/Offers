@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Toast
 
 protocol BaseViewProtocol: class {
 
@@ -15,19 +16,39 @@ protocol BaseViewProtocol: class {
     func hideLoading()
 
     func showError(message: String)
+
+    func showToast(message: String)
 }
 
 extension BaseViewProtocol where Self: BaseViewController {
 
     func showLoading(allowNavigation: Bool) {
-        fatalError("\(#function) Not Implemented")
+
     }
 
     func hideLoading() {
-        fatalError("\(#function) Not Implemented")
+
     }
 
     func showError(message: String) {
-        fatalError("\(#function) Not Implemented")
+        self.view.makeToast(message, duration: 3.0, position: .top)
+        //TODO: add SwiftMessages and replace with toast
+        //        let view = MessageView.viewFromNib(layout: .cardView)
+        //        view.button?.isHidden = true
+        //        view.configureTheme(.error)
+        //        view.configureDropShadow()
+        //        var config = SwiftMessages.Config()
+        //        config.duration = .seconds(seconds: 2.0)
+        //        config.presentationContext = .window(windowLevel: .statusBar)
+        //        view.configureContent(title: L10n.General.Error.title, body: message)
+        //        view.layoutMarginAdditions = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        //        view.backgroundView.layer.cornerRadius = 8
+        //        SwiftMessages.show(config: config, view: view)
+
+    }
+
+    func showToast(message: String) {
+        self.view.makeToast(message, duration: 3.0, position: .bottom)
+
     }
 }

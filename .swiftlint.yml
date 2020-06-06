@@ -5,11 +5,13 @@ disabled_rules: # rule identifiers to exclude from running
  - sorted_imports
  - control_statement
  - closure_end_indentation
+ - redundant_string_enum_value
 
 excluded:
   - Frameworks
   - Pods
   - Submodule
+  - Offers/Resources
 opt_in_rules:
   - empty_count
   - explicit_init
