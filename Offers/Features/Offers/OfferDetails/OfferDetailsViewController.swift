@@ -9,73 +9,6 @@
 import Foundation
 import UIKit
 
-class OfferDetailsView: UIView {
-    @IBOutlet private weak var offerDetailsLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.isHidden = true
-        offerDetailsLabel.setFont(style: .body1light)
-    }
-
-    func setTitle (title: String?) {
-        guard let info = title, info.isEmpty == false else { return }
-
-        offerDetailsLabel.text = info
-        offerDetailsLabel.setText(text: info, style: .body1light, lineHeight: 24)
-        self.isHidden = false
-    }
-}
-
-class CapInfoView: UIView {
-    @IBOutlet private weak var capInfoLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.isHidden = true
-        capInfoLabel.setFont(style: .caption2Medium)
-    }
-
-    func setTitle (title: String?) {
-        guard let info = title, info.isEmpty == false else { return }
-
-        capInfoLabel.text = info
-        self.isHidden = false
-    }
-}
-
-class PriceInfoView: UIView {
-
-    @IBOutlet private weak var priceTitleLabel: UILabel!
-    @IBOutlet private weak var offerOldPricceLabel: UILabel!
-    @IBOutlet private weak var offerNewPriceLabel: UILabel!
-    @IBOutlet private weak var offerExpirationDateLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.isHidden = true
-        priceTitleLabel.setFont(style: .caption1Regular)
-        offerOldPricceLabel.setFont(style: .caption3Regular)
-        offerNewPriceLabel.setFont(style: .medium5)
-        offerExpirationDateLabel.setFont(style: .caption1Regular)
-
-    }
-    func setTitles (oldPrice: String?, newPrice: String?, expirationDate: String? ) {
-        offerOldPricceLabel.text = oldPrice
-
-        let oldPriceattributeString: NSMutableAttributedString = NSMutableAttributedString(string: oldPrice ?? "")
-        oldPriceattributeString.addAttribute(
-            NSAttributedString.Key.strikethroughStyle,
-            value: NSUnderlineStyle.single.rawValue,
-            range: NSRange(location: 0, length: oldPriceattributeString.length) )
-        offerOldPricceLabel.attributedText = oldPriceattributeString
-        offerNewPriceLabel.text = newPrice
-        offerExpirationDateLabel.text = expirationDate
-
-        self.isHidden = false
-    }
-}
-
 class OfferDetailsViewController: BaseViewController {
 
     // MARK: - Presenter
@@ -166,7 +99,7 @@ extension OfferDetailsViewController {
 
     @objc
     func didTapLikeButton() {
-
+        presenter?.toggleLikeOffer()
     }
 
     @objc

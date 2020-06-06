@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OffersListViewController" customModule="Offers" customModuleProvider="target">
             <connections>
+                <outlet property="offersTableView" destination="NNf-w8-K6Y" id="CI7-dp-tJd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,19 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHd-GK-zEr" userLabel="Safe Area Container">
                     <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="104" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="NNf-w8-K6Y">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NNf-w8-K6Y" secondAttribute="bottom" id="1wl-7G-1Rm"/>
+                        <constraint firstItem="NNf-w8-K6Y" firstAttribute="top" secondItem="OHd-GK-zEr" secondAttribute="top" id="9Zh-Zy-urL"/>
+                        <constraint firstItem="NNf-w8-K6Y" firstAttribute="leading" secondItem="OHd-GK-zEr" secondAttribute="leading" id="Xl7-2t-219"/>
+                        <constraint firstAttribute="trailing" secondItem="NNf-w8-K6Y" secondAttribute="trailing" id="qlG-4W-MJN"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

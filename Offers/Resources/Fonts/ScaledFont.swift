@@ -150,6 +150,7 @@ public enum AppFontStyle: String {
     case headline1Mediam = "AppFontStyleH1Mediam"   //Font Family: SF Pro Text; Font Style: Medium; Font Size: 24 pt
     case medium5 = "AppFontStyleMedium5"   //Font Family: SF Pro Text; Font Style: Medium; Font Size: 18 pt
     case caption1Regular = "AppFontStyleC1Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 10 pt
+    case caption2Regular = "AppFontStyleC2Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 12 pt
     case caption3Regular = "AppFontStyleC3Regular"  //Font Family: SF Pro Text; Font Style: Regular; Font Size: 14 pt
     case title2Bold = "AppFontStyleT2Bold"          //Font Family: SF Pro Text; Font Style: Bold; Font Size: 16 pt
     case title1Medium = "AppFontStyleH1Medium"          //Font Family: SF Pro Text; Font Style: Medium; Font Size: 32 pt
@@ -170,7 +171,7 @@ public enum AppFontStyle: String {
             return UIFont.TextStyle.headline
         case .title1Medium:
             return UIFont.TextStyle.title1
-        case .caption1Regular, .caption2Mediam, .caption2Medium, .caption3Normal, .caption4Normal, .caption3Regular:
+        case .caption1Regular,.caption2Regular, .caption2Mediam, .caption2Medium, .caption3Normal, .caption4Normal, .caption3Regular:
             return UIFont.TextStyle.caption1
         case .title2Bold:
             return .title2

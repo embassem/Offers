@@ -21,17 +21,21 @@ extension UIImageView {
         guard let imageurl = urlString ,
             let url = URL(string: imageurl)
             else { return }
-        self.startShimmeringAnimation()
+        var delay = 0.0
+        if KingfisherManager.shared.cache.isCached(forKey: url.absoluteString) == false {
+            self.startShimmeringAnimation()
+            delay = Constants.imageDelayTime
+        }
         self.backgroundColor = UIColor.grayscale200
-        KingfisherManager.shared.retrieveImage(with: url) { [weak self] (result) in
-            //TODO: remove this DispatchQueue After as it for demo delay purpose only.
-            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.delayTime) {
-                let newImage = result.value?.image
-                self?.image = newImage
+        //TODO: remove this DispatchQueue After as it for demo delay purpose only.
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.kf.setImage(with: url) {[weak self] (_) in
                 self?.stopShimmeringAnimation()
                 self?.backgroundColor = UIColor.background
             }
+
         }
+
     }
 }
 

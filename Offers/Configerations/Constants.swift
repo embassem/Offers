@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let delayTime = 1.5
+    static let imageDelayTime = 3.5
 }

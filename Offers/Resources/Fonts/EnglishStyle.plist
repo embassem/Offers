@@ -177,6 +177,13 @@
 		<key>fontSize</key>
 		<integer>14</integer>
 	</dict>
+	<key>AppFontStyleC2Regular</key>
+	<dict>
+		<key>fontName</key>
+		<string>SFProText-Regular</string>
+		<key>fontSize</key>
+		<integer>12</integer>
+	</dict>
 	<key>AppFontStyleMedium5</key>
 	<dict>
 		<key>fontName</key>

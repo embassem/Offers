@@ -21,9 +21,13 @@ class OffersListViewController: BaseViewController {
 
     // MARK: - Private Variables
 
+    lazy var datasource: OffersListDataSource = OffersListDataSource(
+        tableview: offersTableView,
+        delegate: self)
     // MARK: - Computed Variables
 
     // MARK: - IBOutlets
+    @IBOutlet private weak var offersTableView: UITableView!
 
     // MARK: - Custom Setter
 
@@ -32,8 +36,32 @@ class OffersListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = L10n.OffersList.title
-        createNavigationBtn()
+        prepareTableView()
+        presenter?.viewDidLoad()
+        setupLoadingShemmar()
     }
+
+    func setupLoadingShemmar() {
+        //TODO: implement a shemmer dataSource and pass Tableview for it
+        // to hander animating in the Begining
+    }
+
+    func prepareTableView() {
+        offersTableView.register(
+            OfferCellTableViewCell.nib,
+            forCellReuseIdentifier: OfferCellTableViewCell.reuseIdentifier)
+        offersTableView.register(
+            OffersSectionHeader.nib,
+            forHeaderFooterViewReuseIdentifier: OffersSectionHeader.reuseIdentifier)
+        setUpDataDatasource()
+
+    }
+
+    func setUpDataDatasource() {
+        offersTableView.dataSource = datasource
+        offersTableView.delegate = datasource
+    }
+
 }
 
 // MARK: - IBActions
@@ -48,25 +76,21 @@ extension OffersListViewController {
 
 // MARK: - Private
 extension OffersListViewController {
-
-    func createNavigationBtn() {
-        let rightButton = UIBarButtonItem(title: "Details",
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(navigateToDetails))
-        navigationItem.rightBarButtonItem = rightButton
-    }
-
-    @objc
-    func navigateToDetails() {
-        if let offerItem = Item.sampleItem() {
-            let detailsVc = Container.Root.getOfferDetailsScene(offerItem: offerItem)
-            self.push(viewController: detailsVc)
-        }
+    func navigateToDetails(offer: Item) {
+        let detailsVc = Container.Root.getOfferDetailsScene(offerItem: offer)
+        self.push(viewController: detailsVc)
     }
 }
 
 // MARK: - Protocal
 extension OffersListViewController: OffersListViewProtocol {
+    func updateDisplayedOffers(offers: OffersList, refresh: Bool) {
+        datasource.appenOffers(offers.sections ?? [], refresh: true)
+    }
+}
 
+extension OffersListViewController: OffersListDataSourceDelegate {
+    func didSelect(offer: Item) {
+        navigateToDetails(offer: offer)
+    }
 }

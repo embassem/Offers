@@ -33,7 +33,7 @@ BasePresenter<View, Model>, OfferDetailsPresenterProtocol {
     }
 
     func toggleLikeOffer() {
-
+        print(#function, "action for offer: \(String(describing: offer.id))")
     }
 
     func getFullOfferDetails() {

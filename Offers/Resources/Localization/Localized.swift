@@ -2,7 +2,7 @@
 
 import Foundation
 
-// swiftlint:disable superfluous_disable_command
+// swiftlint:disable superfluous_disable_command 
 // swiftlint:disable file_length
 // swiftlint:disable trailing_whitespace trailing_newline
 
@@ -15,16 +15,16 @@ internal enum L10n {
     internal enum OfferDetails {
         /// REDEMPTIONS CAP
         internal static var redemptionsCaps: String = {
-            return L10n.tr("Localizable", "offer_details.redemptions_caps")}()
-        ///
+          return L10n.tr("Localizable", "offer_details.redemptions_caps")}()
+        /// 
         internal static var title: String = {
-            return L10n.tr("Localizable", "offer_details.title")}()
+          return L10n.tr("Localizable", "offer_details.title")}()
     }
 
     internal enum OffersList {
         /// Title
         internal static var title: String = {
-            return L10n.tr("Localizable", "offers_list.title")}()
+          return L10n.tr("Localizable", "offers_list.title")}()
     }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

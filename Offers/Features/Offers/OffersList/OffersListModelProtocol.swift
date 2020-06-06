@@ -10,4 +10,5 @@ import Foundation
 
 protocol OffersListModelProtocol: BaseModelProtocol {
 
+    func getOffers( completion: @escaping (_ Status: Result<OffersList, Error>) -> Void)
 }

@@ -12,6 +12,7 @@ extension UINavigationController {
 
     func changeBackBarButtonImage() {
 
+        //swiftlint:disable:next object_literal
         guard var backButtonBackgroundImage: UIImage = UIImage(named: "ic_back_arrow") else { return }
 
         // The background should be pinned to the left and not stretch.
@@ -35,6 +36,7 @@ extension UIApplicationDelegate {
 
     func changeBackBarButtonImage() {
 
+        //swiftlint:disable:next object_literal
         guard var backButtonBackgroundImage: UIImage = UIImage(named: "ic_back_arrow") else { return }
 
         // The background should be pinned to the left and not stretch.

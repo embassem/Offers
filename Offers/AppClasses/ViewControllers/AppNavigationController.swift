@@ -39,17 +39,17 @@ class AppNavigationController: UINavigationController {
         navBarAppearance.configureWithTransparentBackground()
 
         navBarAppearance.titleTextAttributes = [
-            .foregroundColor: Asset.Colors.grayscale800.color // Navigation bar title color
-            //.font: AppFonts.font(forTextStyle: .largeTitle) // Navigation bar title font
+            .foregroundColor: Asset.Colors.grayscale800.color, // Navigation bar title color
+            .font: AppFonts.font(forTextStyle: .body1Bold) // Navigation bar title font
         ]
 
         navBarAppearance.largeTitleTextAttributes = [
-            .foregroundColor: Asset.Colors.grayscale800.color // Navigation bar title color
-            // .font: AppFonts.font(forTextStyle: .largeTitle) // Navigation bar title font
+            .foregroundColor: Asset.Colors.grayscale800.color, // Navigation bar title color
+            .font: AppFonts.font(forTextStyle: .body1Bold) // Navigation bar title font
         ]
 
         navBarAppearance.backgroundColor = Asset.Colors.grayscale200.color // Navigation bar bg color
-        navBarAppearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 8) // Only works on non large title
+        navBarAppearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0) // Only works on non large title
 
         navigationBar.standardAppearance = navBarAppearance
         navigationBar.compactAppearance = navBarAppearance

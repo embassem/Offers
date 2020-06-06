@@ -8,5 +8,5 @@
 import Foundation
 
 protocol OffersListViewProtocol: BaseViewProtocol {
-
+    func updateDisplayedOffers(offers: OffersList, refresh: Bool)
 }

@@ -16,6 +16,14 @@
 		1893A46A248B12FD00EB063A /* details.json in Resources */ = {isa = PBXBuildFile; fileRef = 1893A467248B083700EB063A /* details.json */; };
 		1893A46D248B151400EB063A /* KingfisherDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* KingfisherDynamic */; };
 		1893A46E248B151400EB063A /* KingfisherDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 1893A46C248B151400EB063A /* KingfisherDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1893A472248B316300EB063A /* OffersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A471248B316300EB063A /* OffersListDataSource.swift */; };
+		1893A478248B32D400EB063A /* OfferCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A476248B32D400EB063A /* OfferCellTableViewCell.swift */; };
+		1893A479248B32D400EB063A /* OfferCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893A477248B32D400EB063A /* OfferCellTableViewCell.xib */; };
+		1893A47C248B36CC00EB063A /* PriceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A47B248B36CC00EB063A /* PriceInfoView.swift */; };
+		1893A47E248B36E500EB063A /* CapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A47D248B36E500EB063A /* CapInfoView.swift */; };
+		1893A480248B371A00EB063A /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A47F248B371A00EB063A /* OfferDetailsView.swift */; };
+		1893A482248B3FE200EB063A /* OffersSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893A481248B3FE200EB063A /* OffersSectionHeader.swift */; };
+		1893A484248B472E00EB063A /* OffersSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893A483248B472E00EB063A /* OffersSectionHeader.xib */; };
 		1896D6BF248ABA4300E549BA /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D6BE248ABA4300E549BA /* UIColor+App.swift */; };
 		18B0B22624897CF900DF800B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B21824897CF900DF800B /* Colors.xcassets */; };
 		18B0B22724897CF900DF800B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B0B21924897CF900DF800B /* Images.xcassets */; };
@@ -98,6 +106,14 @@
 		1893A460248B076900EB063A /* OffersList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersList.swift; sourceTree = "<group>"; };
 		1893A467248B083700EB063A /* details.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = details.json; sourceTree = "<group>"; };
 		1893A468248B121900EB063A /* offerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offerList.json; sourceTree = "<group>"; };
+		1893A471248B316300EB063A /* OffersListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersListDataSource.swift; sourceTree = "<group>"; };
+		1893A476248B32D400EB063A /* OfferCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellTableViewCell.swift; sourceTree = "<group>"; };
+		1893A477248B32D400EB063A /* OfferCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCellTableViewCell.xib; sourceTree = "<group>"; };
+		1893A47B248B36CC00EB063A /* PriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInfoView.swift; sourceTree = "<group>"; };
+		1893A47D248B36E500EB063A /* CapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapInfoView.swift; sourceTree = "<group>"; };
+		1893A47F248B371A00EB063A /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
+		1893A481248B3FE200EB063A /* OffersSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersSectionHeader.swift; sourceTree = "<group>"; };
+		1893A483248B472E00EB063A /* OffersSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersSectionHeader.xib; sourceTree = "<group>"; };
 		1896D6BE248ABA4300E549BA /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		18B0B1F82489729300DF800B /* Offers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B0B21824897CF900DF800B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -193,6 +209,50 @@
 				1893A467248B083700EB063A /* details.json */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		1893A470248B314E00EB063A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1893A471248B316300EB063A /* OffersListDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		1893A473248B32A300EB063A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1893A474248B32AD00EB063A /* OfferCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1893A474248B32AD00EB063A /* OfferCell */ = {
+			isa = PBXGroup;
+			children = (
+				1893A476248B32D400EB063A /* OfferCellTableViewCell.swift */,
+				1893A477248B32D400EB063A /* OfferCellTableViewCell.xib */,
+			);
+			path = OfferCell;
+			sourceTree = "<group>";
+		};
+		1893A475248B32B700EB063A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1893A481248B3FE200EB063A /* OffersSectionHeader.swift */,
+				1893A483248B472E00EB063A /* OffersSectionHeader.xib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		1893A47A248B36BA00EB063A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1893A47B248B36CC00EB063A /* PriceInfoView.swift */,
+				1893A47D248B36E500EB063A /* CapInfoView.swift */,
+				1893A47F248B371A00EB063A /* OfferDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		18B0B1EF2489729300DF800B = {
@@ -446,6 +506,9 @@
 		18B0B2B62489D67600DF800B /* OffersList */ = {
 			isa = PBXGroup;
 			children = (
+				1893A475248B32B700EB063A /* Headers */,
+				1893A473248B32A300EB063A /* Cells */,
+				1893A470248B314E00EB063A /* DataSource */,
 				18B0B2C82489D73500DF800B /* OffersListPresenter.swift */,
 				18B0B2C92489D73500DF800B /* OffersListPresenterProtocol.swift */,
 				18B0B2CA2489D73500DF800B /* OffersListViewController.swift */,
@@ -461,6 +524,7 @@
 		18B0B2B72489D68200DF800B /* OfferDetails */ = {
 			isa = PBXGroup;
 			children = (
+				1893A47A248B36BA00EB063A /* Views */,
 				18B0B2B82489D71E00DF800B /* OfferDetailsPresenter.swift */,
 				18B0B2B92489D71E00DF800B /* OfferDetailsPresenterProtocol.swift */,
 				18B0B2BA2489D71E00DF800B /* OfferDetailsViewController.swift */,
@@ -551,12 +615,14 @@
 				18B0B28C2489BEFA00DF800B /* SF-Pro-Text-Regular.otf in Resources */,
 				18B0B26424897EBC00DF800B /* Localizable.strings in Resources */,
 				18B0B28A2489BEFA00DF800B /* SF-Pro-Text-Bold.otf in Resources */,
+				1893A484248B472E00EB063A /* OffersSectionHeader.xib in Resources */,
 				18B0B2C72489D71E00DF800B /* OfferDetailsViewController.xib in Resources */,
 				18B0B28D2489BEFA00DF800B /* SF-Pro-Text-Thin.otf in Resources */,
 				18B0B25D24897E7F00DF800B /* SplashViewController.xib in Resources */,
 				18B0B2D72489D73500DF800B /* OffersListViewController.xib in Resources */,
 				18B0B23124897DB100DF800B /* Base.xcconfig in Resources */,
 				1893A46A248B12FD00EB063A /* details.json in Resources */,
+				1893A479248B32D400EB063A /* OfferCellTableViewCell.xib in Resources */,
 				18B0B2892489BEFA00DF800B /* SF-Pro-Text-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +675,7 @@
 			files = (
 				18B0B25124897E6300DF800B /* UIWindow+Transition.swift in Sources */,
 				18B0B23524897DCC00DF800B /* AppManager.swift in Sources */,
+				1893A482248B3FE200EB063A /* OffersSectionHeader.swift in Sources */,
 				1893A461248B076900EB063A /* Price.swift in Sources */,
 				18B0B25324897E6300DF800B /* UICollecttionViewCell+Reusable.swift in Sources */,
 				18B0B2C12489D71E00DF800B /* OfferDetailsPresenterProtocol.swift in Sources */,
@@ -624,6 +691,7 @@
 				18B0B23324897DB100DF800B /* Environment.swift in Sources */,
 				18B0B2D62489D73500DF800B /* OffersListModelProtocol.swift in Sources */,
 				18B0B2DB2489DCB000DF800B /* UIViewController.swift in Sources */,
+				1893A472248B316300EB063A /* OffersListDataSource.swift in Sources */,
 				18B0B26B248980BA00DF800B /* UIImageView+Essentials.swift in Sources */,
 				18B0B24724897E3D00DF800B /* BaseViewController.swift in Sources */,
 				18B0B2D02489D73500DF800B /* OffersListPresenter.swift in Sources */,
@@ -637,10 +705,14 @@
 				18B0B2C52489D71E00DF800B /* OfferDetailsModel.swift in Sources */,
 				18B0B2D52489D73500DF800B /* OffersListModel.swift in Sources */,
 				18B0B2C62489D71E00DF800B /* OfferDetailsModelProtocol.swift in Sources */,
+				1893A47E248B36E500EB063A /* CapInfoView.swift in Sources */,
+				1893A480248B371A00EB063A /* OfferDetailsView.swift in Sources */,
 				18B0B2DD2489E03300DF800B /* NavigationBar+Appearance.swift in Sources */,
 				18B0B24A24897E3D00DF800B /* AppNavigationController.swift in Sources */,
 				18B0B27D2489BCA700DF800B /* Fonts.swift in Sources */,
+				1893A47C248B36CC00EB063A /* PriceInfoView.swift in Sources */,
 				18B0B26524897EBC00DF800B /* Localized.swift in Sources */,
+				1893A478248B32D400EB063A /* OfferCellTableViewCell.swift in Sources */,
 				18B0B2D22489D73500DF800B /* OffersListViewController.swift in Sources */,
 				18B0B22A24897CF900DF800B /* AppDelegate.swift in Sources */,
 				18B0B25224897E6300DF800B /* Result.swift in Sources */,

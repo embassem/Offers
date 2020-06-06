@@ -9,5 +9,5 @@
 import Foundation
 
 protocol OffersListPresenterProtocol: BasePresenterProtocol {
-
+    func viewDidLoad()
 }
