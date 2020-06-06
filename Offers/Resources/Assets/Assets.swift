@@ -28,6 +28,7 @@ internal enum Asset {
     internal static let icBackArrow = ImageAsset(name: "ic_back_arrow")
     internal static let icLike = ImageAsset(name: "ic_like")
     internal static let icLikesFilled = ImageAsset(name: "ic_likes.filled")
+    internal static let icNoInternet = ImageAsset(name: "ic_no_internet")
     internal static let icShare = ImageAsset(name: "ic_share")
     internal static let imgLogo = ImageAsset(name: "img_logo")
     internal enum Preview {

@@ -14,7 +14,7 @@ class OfferDetailsBuilder {
     class func createModule(offer: OfferDetails) -> UIViewController {
 
         let view = OfferDetailsViewController(nibName: "OfferDetailsViewController", bundle: nil)
-        let model = OfferDetailsModel()
+        let model = OfferDetailsModel(service: NetworkManager.shared)
         let presenter = OfferDetailsPresenter(offer: offer, view: view, model: model)
         view.setPresenter(presenter: presenter)
 

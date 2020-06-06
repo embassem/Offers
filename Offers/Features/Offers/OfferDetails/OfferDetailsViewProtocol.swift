@@ -10,4 +10,5 @@ import Foundation
 protocol OfferDetailsViewProtocol: BaseViewProtocol {
 
     func updateDisplayedOffer(offer: OfferDetails)
+    func updateOfferDetailWithNoInternet()
 }

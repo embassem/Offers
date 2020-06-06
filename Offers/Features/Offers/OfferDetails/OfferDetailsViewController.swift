@@ -35,6 +35,7 @@ class OfferDetailsViewController: BaseViewController {
     @IBOutlet private weak var priceInfoContainerView: PriceInfoView!
     @IBOutlet private weak var capInfoContainerView: CapInfoView!
 
+    @IBOutlet private weak var noInternetView: UIView!
     // MARK: - Custom Setter
 
     // MARK: - View controller lifecycle methods
@@ -114,8 +115,12 @@ extension OfferDetailsViewController {
 
 // MARK: - Protocal
 extension OfferDetailsViewController: OfferDetailsViewProtocol {
+    func updateOfferDetailWithNoInternet() {
+        noInternetView.isHidden = false
+    }
 
     func updateDisplayedOffer(offer: OfferDetails) {
+        noInternetView.isHidden = true
         offerTitleLabel.text = offer.title ?? ""
         offerBrandLabel.text = offer.brand
         offerLikeslabel.text = String(offer.favoriteCount ?? 0 )

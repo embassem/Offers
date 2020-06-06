@@ -9,10 +9,21 @@
 import Foundation
 
 class OfferDetailsModel: BaseModel, OfferDetailsModelProtocol {
-    func getOffer(id: Int, completion: @escaping (_ Status: Result<OfferDetails, Error>) -> Void) {
-        if let offer = loadSample() {
-            return completion(.success(offer))
-        }
+
+    var remoteservice: OffersService
+
+    init(service: OffersService) {
+        self.remoteservice = service
+        super.init()
+    }
+
+    func getOffer(id: Int, completion: @escaping (_ Status: Result<OfferDetails, APIError>) -> Void) {
+        remoteservice.getOfferDetails(id: id, completion: { (result, _) in
+            completion(result)
+        })
+        //        if let offer = loadSample() {
+        //            return completion(.success(offer))
+        //        }
     }
 }
 

@@ -13,6 +13,7 @@
                 <outlet property="capInfoContainerView" destination="HS6-fD-2zT" id="oqC-cl-Pwk"/>
                 <outlet property="detailsContainerView" destination="nOF-Wx-hpe" id="fkR-6w-Try"/>
                 <outlet property="headerImageContainer" destination="DSn-HS-a9A" id="iPh-sm-2Pe"/>
+                <outlet property="noInternetView" destination="90o-vF-3zu" id="ahF-bH-YtA"/>
                 <outlet property="offerBrandLabel" destination="vtX-4Q-KrP" id="qnU-Rv-DkS"/>
                 <outlet property="offerLikeslabel" destination="ZzS-Cu-vNV" id="w4i-C6-9Yb"/>
                 <outlet property="offerMainImageView" destination="1yr-4S-R2t" id="lpe-95-gEB"/>
@@ -234,12 +235,34 @@
                                 <constraint firstItem="qtf-qw-2gb" firstAttribute="trailing" secondItem="cjv-78-vlX" secondAttribute="trailing" id="yZb-OX-ORC"/>
                             </constraints>
                         </scrollView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90o-vF-3zu">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkp-fZ-1oK">
+                                    <rect key="frame" x="20" y="1" width="335" height="22"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.91921168565750122" green="0.0" blue="0.051574833018849471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hkp-fZ-1oK" secondAttribute="trailing" constant="20" id="2OB-cF-Fld"/>
+                                <constraint firstItem="hkp-fZ-1oK" firstAttribute="leading" secondItem="90o-vF-3zu" secondAttribute="leading" constant="20" id="UVV-Q0-2Oh"/>
+                                <constraint firstAttribute="bottom" secondItem="hkp-fZ-1oK" secondAttribute="bottom" constant="2" id="mUu-ja-kyE"/>
+                                <constraint firstItem="hkp-fZ-1oK" firstAttribute="top" secondItem="90o-vF-3zu" secondAttribute="top" constant="1" id="nhk-ya-ZjI"/>
+                                <constraint firstAttribute="height" constant="25" id="xQn-a3-ilG"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="cjv-78-vlX" secondAttribute="bottom" id="0OL-Q0-Lis"/>
+                        <constraint firstAttribute="trailing" secondItem="90o-vF-3zu" secondAttribute="trailing" id="0Ys-fs-ziz"/>
+                        <constraint firstItem="90o-vF-3zu" firstAttribute="top" secondItem="OHd-GK-zEr" secondAttribute="top" id="2dQ-mt-fJU"/>
                         <constraint firstItem="cjv-78-vlX" firstAttribute="leading" secondItem="OHd-GK-zEr" secondAttribute="leading" id="6g5-oh-0Rf"/>
                         <constraint firstItem="cjv-78-vlX" firstAttribute="top" secondItem="OHd-GK-zEr" secondAttribute="top" id="Owy-Wa-Qaf"/>
+                        <constraint firstItem="90o-vF-3zu" firstAttribute="leading" secondItem="OHd-GK-zEr" secondAttribute="leading" id="gAX-OD-orw"/>
                         <constraint firstAttribute="trailing" secondItem="cjv-78-vlX" secondAttribute="trailing" id="kP3-em-l8R"/>
                     </constraints>
                 </view>

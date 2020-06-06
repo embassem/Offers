@@ -48,7 +48,12 @@ BasePresenter<View, Model>, OfferDetailsPresenterProtocol {
                     self.view?.updateDisplayedOffer(offer: self.offer)
                 }
             case .failure(let error):
-                self.view?.showError(message: error.localizedDescription)
+
+                if let errorCode = error.code, ( 1009...1009 ~= abs(errorCode)) {
+                    self.view?.updateOfferDetailWithNoInternet()
+                } else {
+                    self.view?.showError(message: error.localizedDescription)
+                }
             }
         })
     }

@@ -62,6 +62,10 @@ class OffersListViewController: BaseViewController {
         offersTableView.delegate = datasource
     }
 
+    func didTapRefreshData() {
+        presenter?.viewDidLoad()
+    }
+
 }
 
 // MARK: - IBActions
@@ -85,10 +89,19 @@ extension OffersListViewController {
 // MARK: - Protocal
 extension OffersListViewController: OffersListViewProtocol {
     func updateDisplayedOffers(offers: OffersList, refresh: Bool) {
+        self.offersTableView.backgroundView = nil
         datasource.appenOffers(offers.sections ?? [], refresh: true)
     }
-}
+    func updateOffersWithNoInternet() {
+        let noInternetView = NoInternetView()
+        noInternetView.refresh = self.didTapRefreshData
+        self.offersTableView.backgroundView = noInternetView
+    }
 
+    func updateOffersWithError() {
+
+    }
+}
 extension OffersListViewController: OffersListDataSourceDelegate {
     func didSelect(offer: Item) {
         navigateToDetails(offer: offer)

@@ -28,6 +28,7 @@ BasePresenter<View, Model>, OffersListPresenterProtocol {
 
     func getOffersList() {
 
+        view?.showLoading(allowNavigation: true)
         model?.getOffers(completion: { (result) in
 
             switch result {
@@ -35,11 +36,22 @@ BasePresenter<View, Model>, OffersListPresenterProtocol {
                 self.offers = newOffers
                 //TODO : remove this DispatchQueue After as it for demo delay purpose only.
                 DispatchQueue.main.asyncAfter(deadline: .now() + Constants.delayTime) {
+
                     self.view?.updateDisplayedOffers(offers: newOffers, refresh: true)
+
                 }
             case .failure(let error):
-                self.view?.showError(message: error.localizedDescription)
+                //NSURLErrorTimedOut = -1001
+                //NSURLErrorNotConnectedToInternet = -1009
+
+                if let errorCode = error.code, ( 1009...1009 ~= abs(errorCode)) {
+                    self.view?.updateOffersWithNoInternet()
+                } else {
+                    self.view?.showError(message: error.localizedDescription)
+                }
             }
+
+            self.view?.hideLoading()
         })
     }
 }

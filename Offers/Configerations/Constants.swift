@@ -9,6 +9,6 @@
 import Foundation
 
 struct Constants {
-    static let delayTime = 1.5
+    static let delayTime = 0.0  // 0 for real network , 1.5 for add delay for json load
     static let imageDelayTime = 3.5
 }

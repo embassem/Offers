@@ -27,6 +27,7 @@ class  OffersListDataSource: NSObject {
         self.sections?.append(contentsOf: sections)
         reload()
     }
+
     init(tableview: UITableView, delegate: OffersListDataSourceDelegate) {
         self.tableview = tableview
         self.delegate = delegate
