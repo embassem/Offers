@@ -40,6 +40,7 @@ class AppManager: NSObject {
         let vc = Container.getSplashScene()
         window.rootViewController = vc
         window.makeKeyAndVisible()
+        self.shared.window = window
     }
 
     @available(iOS 13.0, *)
